@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>College Placement Management</title>
+  <link rel="stylesheet" href="collage.css" />
+</head>
+<body>
+  <header>
+    <h1>College Placement Management System</h1>
+  </header>
+
+  <!-- Navigation Tabs -->
+  <nav class="tabs">
+    <button onclick="showTab('student')">Student</button>
+    <button onclick="showTab('recruiter')">Recruiter</button>
+    <button onclick="showTab('admin')">Admin</button>
+  </nav>
+
+  <!-- Student Section -->
+  <section id="student" class="tab-content">
+    <h2>Student Portal</h2>
+    <form id="studentForm">
+      <input type="text" id="studentName" placeholder="Full Name" required />
+      <input type="email" id="studentEmail" placeholder="Email" required />
+      <input type="text" id="studentCourse" placeholder="Course" required />
+      <button type="submit">Register</button>
+    </form>
+
+    <h3>Available Jobs</h3>
+    <ul id="studentJobs"></ul>
+
+    <h3>Applied Jobs</h3>
+    <ul id="appliedJobs"></ul>
+  </section>
+
+  <!-- Recruiter Section -->
+  <section id="recruiter" class="tab-content hidden">
+    <h2>Recruiter Dashboard</h2>
+    <form id="jobForm">
+      <input type="text" id="jobTitle" placeholder="Job Title" required />
+      <input type="text" id="jobCompany" placeholder="Company Name" required />
+      <button type="submit">Post Job</button>
+    </form>
+
+    <h3>Posted Jobs</h3>
+    <ul id="recruiterJobs"></ul>
+  </section>
+
+  <!-- Admin Section -->
+  <section id="admin" class="tab-content hidden">
+    <h2>Admin Panel</h2>
+    <button onclick="loadAdminData()">Load Data</button>
+    <h3>All Students</h3>
+    <ul id="allStudents"></ul>
+
+    <h3>All Job Applications</h3>
+    <ul id="allApplications"></ul>
+  </section>
+
+  <script src="collage.js"></script>
+</body>
+</html>

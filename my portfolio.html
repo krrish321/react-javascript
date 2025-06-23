@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Krish Sirohiya | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="myportfolio.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Krish</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="content">
+      <h1>Hello, I'm <span>Krish 👋</span></h1>
+      <p>Full-Stack Web Developer | React • Node.js • MongoDB</p>
+      <div class="btns">
+        <a href="#projects">✨ Projects</a>
+        <a href="#contact" >💼 Hire Me</a>
+        <a href="Krish IT.pdf" download class="resume-btn">📃 Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="glass-card">
+    <h2>About Me</h2>
+    <p>I’m a passionate and curious developer currently mastering the MERN stack. I love crafting modern, clean, and responsive websites with creative flair.</p>
+  </section>
+
+  <section id="skills" class="glass-card">
+    <h2>Skills</h2>
+    <div class="skill-bar">
+      <p>HTML</p>
+      <div class="bar"><span style="width: 95%"></span></div>
+    </div>
+    <div class="skill-bar">
+      <p>CSS</p>
+      <div class="bar"><span style="width: 90%"></span></div>
+    </div>
+    <div class="skill-bar">
+      <p>JavaScript</p>
+      <div class="bar"><span style="width: 85%"></span></div>
+    </div>
+    <div class="skill-bar">
+      <p>React.js</p>
+      <div class="bar"><span style="width: 80%"></span></div>
+    </div>
+    <div class="skill-bar">
+      <p>Node.js & MongoDB</p>
+      <div class="bar"><span style="width: 75%"></span></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-list">
+      <div class="project glass-card">
+        <h3>🔒 SecureChain Wallet</h3>
+         <a href="blockchainew.html" target="_blank" color="white">Blockchain Transaction Simulator using HTML, CSS, and JS.</a>
+
+      </div>
+      <div class="project glass-card">
+        <h3>📊 Placement Manager</h3>
+        <p>College placement management system for students and staff.</p>
+      </div>
+      <div class="project glass-card">
+        <h3>🎮 Game Betting Web App</h3>
+        <p>Multi-game betting website with login and wallet system.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="glass-card">
+    <h2>Contact Me</h2>
+    <p>📧 krrishsirohiya321@gmail.com</p>
+    <p>📞 +91 9770929799 </p>
+    <p>📍 India</p>
+    <p>Feel free to reach out for collaborations or just a chat!</p>
+
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Krish Sirohiya | All rights reserved</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.glass-card').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+
+</body>
+</html>

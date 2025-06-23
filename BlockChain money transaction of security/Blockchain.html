@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SecureChain Wallet</title>
+  <link rel="stylesheet" href="Blockchain.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🔐 SecureChain Wallet</h1>
+      <button id="toggleMode">Toggle Light/Dark Mode</button>
+    </header>
+
+    <form id="transactionForm">
+      <input type="text" id="sender" placeholder="Sender Name" required />
+      <input type="text" id="receiver" placeholder="Receiver Name" required />
+      <input type="number" id="amount" placeholder="Amount" required />
+      <button type="submit">🚀 Send Money</button>
+    </form>
+
+    <section id="alerts"></section>
+
+    <section class="controls">
+      <input type="text" id="searchInput" placeholder="Search by sender/receiver..." />
+      <button id="clearBlockchain">🗑️ Clear Blockchain</button>
+    </section>
+
+    <h2>📜 Transaction History</h2>
+    <table id="transactionTable">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Sender</th>
+          <th>Receiver</th>
+          <th>Amount</th>
+          <th>Timestamp</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <h2>🧱 Blockchain</h2>
+    <div id="blockchain"></div>
+
+    <button id="validateBtn">🔍 Validate Blockchain</button>
+    <p id="validationResult"></p>
+  </div>
+
+  <script src="Blockchain.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Krish Sirohiya | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="test.css" />
+</head>
+<body>
+
+  <div class="toggle-mode" onclick="toggleDarkMode()">
+    <i class="fas fa-sun"></i>
+  </div>
+
+  <header>
+    <h1>Krish Sirohiya</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" data-aos="fade-up">
+    <h2>Hello, I'm <span class="typing"></span> 👋</h2>
+    <p>Aspiring Full-Stack Developer | MERN Stack</p>
+    <div class="buttons">
+      <a href="#projects">See Projects</a>
+      <a href="#contact">Hire Me</a>
+      <a href="resume.pdf" download class="resume-btn">Download Resume</a>
+    </div>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+  </section>
+
+  <section id="about" data-aos="fade-right">
+    <h2>About Me</h2>
+    <p>I’m passionate about web development and currently learning full-stack development using the MERN stack.</p>
+  </section>
+
+  <section id="skills" data-aos="fade-left">
+    <h2>Skills</h2>
+    <div class="skill-bar">
+      <span>HTML</span>
+      <div><div class="bar html"></div></div>
+    </div>
+    <div class="skill-bar">
+      <span>CSS</span>
+      <div><div class="bar css"></div></div>
+    </div>
+    <div class="skill-bar">
+      <span>JavaScript</span>
+      <div><div class="bar js"></div></div>
+    </div>
+    <div class="skill-bar">
+      <span>React</span>
+      <div><div class="bar react"></div></div>
+    </div>
+  </section>
+
+  <section id="projects" data-aos="zoom-in">
+    <h2>Projects</h2>
+    <p>Coming soon...</p>
+  </section>
+
+  <section id="testimonials" data-aos="fade-up">
+    <h2>Testimonials</h2>
+    <div class="testimonial-slider">
+      <p>"Krish is highly dedicated and passionate!"</p>
+      <p>"Great teamwork and coding mindset!"</p>
+      <p>"Delivered my website in just 5 days!"</p>
+    </div>
+  </section>
+
+  <section id="contact" data-aos="fade-in">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:krish@example.com">krish@example.com</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Krish Sirohiya | All rights reserved</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script>
+    const typingText = ["Krish", "a Developer", "a Creator"];
+    let i = 0, j = 0, current = "";
+    function type() {
+      if (j < typingText[i].length) {
+        current += typingText[i][j++];
+        document.querySelector(".typing").innerText = current;
+        setTimeout(type, 100);
+      } else {
+        setTimeout(() => {
+          current = ""; j = 0; i = (i + 1) % typingText.length;
+          type();
+        }, 2000);
+      }
+    }
+    type();
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  color: #fff;
+  padding-top: 80px;
+  transition: background 0.3s;
+}
+
+.dark-mode {
+  background: #111;
+  color: #eee;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(8px);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+header nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #ff4f8b;
+}
+
+.hero {
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.buttons a {
+  display: inline-block;
+  margin: 1rem 1rem 0 0;
+  background: #ff4f8b;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.buttons a:hover {
+  transform: scale(1.1);
+}
+
+.social-icons a {
+  margin: 0 10px;
+  font-size: 1.5rem;
+  color: white;
+}
+
+#about, #skills, #projects, #contact, #testimonials {
+  padding: 3rem 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  margin: 2rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.skill-bar {
+  margin: 1rem 0;
+}
+
+.skill-bar span {
+  font-weight: 600;
+}
+
+.skill-bar div {
+  background: #555;
+  height: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bar {
+  height: 10px;
+  background: #ff4f8b;
+  width: 0%;
+  animation: load 2s forwards;
+}
+
+.bar.html { width: 90%; }
+.bar.css { width: 80%; }
+.bar.js { width: 70%; }
+.bar.react { width: 60%; }
+
+@keyframes load {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.testimonial-slider p {
+  animation: slide 8s infinite;
+  text-align: center;
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+@keyframes slide {
+  0%, 20% { opacity: 1; }
+  25%, 100% { opacity: 0; }
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.toggle-mode {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: #222;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #fff;
+}

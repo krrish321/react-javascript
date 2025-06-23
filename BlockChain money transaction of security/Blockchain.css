@@ -1,0 +1,179 @@
+/* Reset & base styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  max-width: 800111px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Light/Dark Mode */
+body.light-mode {
+  background-color: #f5f5f5;
+  color: #121212;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+#toggleMode {
+  padding: 8px 12px;
+  border: none;
+  background-color: #1abc9c;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+input, button {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+input {
+  flex: 1;
+  background-color: #eee;
+}
+
+body.dark-mode input {
+  background-color: #333;
+  color: white;
+}
+
+button {
+  background-color: #1abc9c;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Alerts */
+#alerts {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.alert {
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  animation: fadeIn 0.4s ease;
+}
+
+.alert.success {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.alert.error {
+  background-color: #e74c3c;
+  color: white;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+/* Blockchain Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  background-color: rgba(0,0,0,0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+body.dark-mode table {
+  background-color: #222;
+  color: white;
+}
+
+/* Blockchain Blocks */
+#blockchain .block {
+  background-color: #2c3e50;
+  color: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-left: 6px solid #1abc9c;
+  border-radius: 6px;
+  animation: slideIn 0.4s ease;
+  position: relative;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #16a085;
+  border: none;
+  color: white;
+  padding: 4px 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+/* Result Text */
+#validationResult {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

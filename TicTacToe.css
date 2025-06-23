@@ -1,0 +1,94 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+h1{
+    font-size: 2.5rem;
+    color: rgb(3, 0, 48);
+    margin: 1rem;
+}
+
+body{
+    background-image: url(pexels-asadphoto-1456291.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+/*body {
+    background-color: blueviolet;
+    text-align: center;
+}*/
+.container{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game{
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+}
+
+
+
+.box{
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 1rem;
+    border: 1rem solid rgba(0,0,0,0,1);
+    box-shadow: 0 0 5rem rgba(0,0,0,0,5);
+    font-size: 8vmin;
+    color: rgb(9, 49, 56);
+   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+   backdrop-filter: blur(7px);
+
+}
+/*.box{
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0,0,0,0,1);
+    font-size: 8vmin;
+    color: rgb(156, 0, 0);
+   background-color: rgb(255, 212, 174);
+}*/
+
+#reset-btn{
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: rgb(7, 255, 69);
+    color: rgb(0, 0, 0);
+    border-radius: 1rem;
+    margin: 1rem;
+}
+#new-btn{
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: rgb(195, 255, 0);
+    color: rgb(0, 0, 0);
+    border-radius: 1rem;
+}
+#msg{
+    font-size: 3rem;
+    color: white;
+}
+.msg-container{
+    height: 100vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+
+}
+.hide{
+    display: none;
+}

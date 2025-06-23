@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BetZone - Online Betting</title>
+  <link rel="stylesheet" href="betting.css" />
+</head>
+<body>
+
+  <header>
+    <h1>💰 BetZone</h1>
+    <nav>
+      <span id="wallet">Wallet: ₹1000</span>
+      <button onclick="showLogin()">Login</button>
+      <button onclick="showSignup()">Sign Up</button>
+    </nav>
+  </header>
+  <main>
+    <section class="betting-area">
+      <h2>Choose Game</h2>
+      <select id="gameSelector" onchange="changeGame()">
+        <option value="coin"> Coin Toss</option>
+        <option value="dice">🎲 Dice Roll</option>
+        <option value="guess">🔢 Guess the Number</option>
+      </select>
+
+      <h2 id="gameTitle">Place Your Bet - Coin Toss</h2>
+      <form id="betForm">
+        <label>Enter Amount (₹):</label>
+        <input type="number" id="amount" required />
+
+        <div id="coinOptions">
+          <label>Choose:</label>
+          <select id="betOption">
+            <option value="heads">Heads</option>
+            <option value="tails">Tails</option>
+          </select>
+        </div>
+
+        <div id="diceOptions" style="display: none;">
+          <label>Pick a number (1-6):</label>
+          <select id="diceGuess">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div id="guessOptions" style="display: none;">
+          <label>Guess a number (1-5):</label>
+          <select id="guessNumber">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <div id="diceAnimation" class="dice" style="display:none;">
+          <div class="face" id="diceFace">🎲</div>
+        </div>
+
+
+        <button type="submit">Place Bet</button>
+      </form>
+
+      <div class="coin" id="coin">
+        <div class="heads"> Heads</div>
+        <div class="tails"> Tails</div>
+      </div>
+
+      <p id="resultMsg"></p>
+
+      <div id="history">
+        <h3>Game History</h3>
+        <ul id="historyList"></ul>
+      </div>
+    </section>
+  </main>
+
+
+  <footer>
+    <p>© 2025 BetZone. All rights reserved.</p>
+  </footer>
+
+  <script src="betting.js"></script>
+</body>
+</html>
